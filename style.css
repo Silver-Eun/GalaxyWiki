@@ -1,0 +1,144 @@
+html,
+body {
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f5f5f5;
+  padding: 8px 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li:hover > a {
+  color: white;
+}
+
+.navbar ul ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  top: 100%;
+  left: 50%;
+}
+
+.navbar li:hover > ul {
+  display: block;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.navbar > ul {
+  border-radius: 5px;
+}
+
+.navbar > ul > li {
+  display: block;
+  background-color: #f5f5f5;
+  align-items: center;
+  float: left;
+}
+
+.navbar > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navbar a {
+  display: block;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: black;
+}
+
+.navbar__logo > span {
+  color: #d49466;
+}
+
+.navbar__menu {
+  width: 580px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar__menu li:hover {
+  background-color: #ddd8d8;
+  border-radius: 7px;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar__menu li {
+    text-align: center;
+  }
+
+  .navbar__icons {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: block;
+  }
+
+  .container {
+    width: 100vw;
+    margin: 0;
+  }
+}
