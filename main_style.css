@@ -5,7 +5,7 @@ html {
 
 @media screen and (max-width: 600px) {
   html {
-    background: url(backimage.jpg) no-repeat center/ 150% 50%;
+    background: url(backimage.jpg) no-repeat center/ 150% 42%;
     background-color: #f5f5f5;
   }
 }
