@@ -1,4 +1,4 @@
-html,
-body {
-  background-image: url(backimage.jpg);
+html {
+  background: url(backimage.jpg) no-repeat center/ 150% 50%;
+  background-color: #f5f5f5;
 }
