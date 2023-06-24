@@ -6,6 +6,7 @@
   text-align: center;
   align-items: center;
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .image > img {
