@@ -27,6 +27,10 @@
     grid-gap: 40px;
   }
 
+  .specsheet span {
+    white-space: wrap;
+  }
+
   .image {
     padding-top: 0px;
   }
