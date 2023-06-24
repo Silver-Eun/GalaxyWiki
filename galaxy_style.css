@@ -6,7 +6,7 @@
   grid-gap: 10px;
   text-align: center;
   font-size: 20px;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .main {
@@ -20,6 +20,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
 }
+.specsheet {
+  white-space: nowrap;
+}
 
 .image > a > img {
   width: 100%;
@@ -27,12 +30,17 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+.image > img {
+  width: 280px;
+  height: 350px;
+}
+
+@media screen and (max-width: 768px) {
   .main,
   .main1 {
-    white-space: wrap;
     grid-template-columns: 1fr;
     grid-gap: 40px;
+    padding: 0;
   }
 
   .main {
@@ -43,8 +51,18 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
 
+  .specsheet {
+    word-break: break-all;
+    width: 90vw;
+  }
+
+  .specsheet span {
+    white-space: wrap;
+  }
+
   .image {
     padding-top: 0px;
+    margin: 0 auto;
   }
 
   .image > a > img {
